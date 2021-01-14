@@ -5,7 +5,7 @@ const config = require('config')
 class FileService {
     createDir(file) {
         const filePath = `${config.get('filePath')}/${file.user}/${file.path}`
-        return new Promise(((resolve, reject) => {
+        return new Promise((resolve, reject) => {
             try {
                 //если файл по пути существует, то создаем папку
                 if (!fs.existsSync(filePath)) {
@@ -23,7 +23,7 @@ class FileService {
 
             }
 
-        }))
+        })
 
 
     }
